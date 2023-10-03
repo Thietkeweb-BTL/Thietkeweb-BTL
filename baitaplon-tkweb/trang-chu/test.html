@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            
+
+        }
+        .myslide{
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            background-position: center;
+            background-size: cover;
+            transition: 1s;
+            background-repeat: no-repeat;
+            background-attachment: fixed
+            
+        }
+        #slide-1{
+            background-image: url(images/img_1.png);
+        }
+        #slide-2{
+            background-image: url(images/img_2.png);
+        }
+        #slide-3{
+            background-image: url(images/img_6.png);
+        }
+        .next{
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border: none;
+            background:none
+            
+        }
+        .array{
+            width: 50px;
+            height: 50px;
+            border-left: 10px soild white;
+            border-top: 10px solid white;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="myslide" id="slide-1"></div>
+    <div class="myslide" id="slide-2"></div>
+    <div class="myslide" id="slide-3"></div>
+    <button class="next" onclick="newsilde"><div style="rotate: 45deg;" class="array"></div></button>
+
+    <script>
+        var a=0; 
+        var anh=document.getElementsByClassName("myslide");
+
+        function nqson(){
+            for(let i=0; i<anh.length; i++){
+                if(i<=a){
+                    anh[i].style.left="0px";
+                }
+                else{ anh[i].style.left="100vw";}
+            }
+            a++;
+            if(a==anh.length) a=0;
+            setTimeout(nqson,3000)
+        }
+        nqson();
+        function next(){
+            clearTimeout(setTimeout(nqson,3000));
+            nqson();
+        }
+        
+
+    </script>
+</body>
+</html>
