@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" type="logo">
+    <title>header</title>
+    <style>
+        body {
+    margin: 0px;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    text-align: right;
+    color: white;
+    background-color: black;
+    width: 100%;
+}
+
+nav img {
+
+    border: 0;
+    vertical-align: middle;
+
+}
+
+@media(min-width:506px) {
+    .logo {
+        font-weight: 400;
+        float: left;
+        height: 8wh;
+        width: 8vw;
+        margin-right: 50px;
+
+    }
+
+}
+
+@media (max-width:505px) {
+    .logo {
+        float: left;
+        height: 33vh;
+        width: 25vw;
+        margin-right: 20vh;
+    }
+}
+
+header a {
+    color: white;
+
+}
+
+nav {
+    display: flex;
+    box-shadow: 0 0 5px 0;
+    position: sticky;
+    top: 0px;
+    background-color: #ffffff;
+
+
+
+
+}
+
+nav ul {
+    display: flex;
+    padding: 0px;
+    flex-wrap: wrap;
+
+
+
+
+}
+
+nav ul li {
+    display: flex;
+    padding: 20px 12px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+
+
+}
+
+ul li:hover {
+    color: plum;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <a href="">Đăng nhập</a> |
+        <a href="">Đăng ký</a>
+    </header>
+
+    <nav>
+        <img src="images/logo.png" alt="logo" class="logo">
+        <ul>
+            <li>trang chủ</li>
+            <li>Lịch Chiếu</li>
+            <li>Giá vé</li>
+            <li>Tin mới và ưu đãi</li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>
