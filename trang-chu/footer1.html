@@ -13,7 +13,7 @@
             font-family: 'Oswald', Arial, Helvetica, sans-serif;
             font-size: 16px;
             display: flex;
-            height: 192px;
+            height: 230px;
 
         }
 
@@ -24,12 +24,12 @@
 
         h3 {
 
-            margin: 10px 10px 10px 20px;
+            margin: 10px 10px 10px 50px;
 
         }
 
         .content-left ul {
-            margin-left: 80px;
+            margin-left: 90px;
         }
 
         .content-left ul li {
@@ -39,7 +39,7 @@
         }
 
         #icon {
-            margin-left: 100px;
+            margin-left: 110px;
             margin-bottom: 10px;
 
         }
@@ -49,26 +49,26 @@
         }
 
         #fb {
-            width: 5%;
-            height: 5%;
+            width: 8%;
+            height: 8%;
             margin-right: 5px;
         }
 
         #zalo {
-            width: 5%;
-            height: 5%;
+            width: 8%;
+            height: 8%;
             margin-right: 5px;
         }
 
         #ig {
-            width: 5%;
-            height: 5%;
+            width: 8%;
+            height: 8%;
             margin-right: 5px;
         }
 
         #tiktok {
-            width: 5%;
-            height: 5%;
+            width: 8%;
+            height: 8%;
             margin-right: 5px;
         }
 
@@ -76,7 +76,8 @@
             margin-left: 110px;
         }
 
-        .table input,textarea {
+        .table input,
+        textarea {
             margin-left: 30px;
             border: none;
             border-radius: 3px;
@@ -84,16 +85,19 @@
             padding: 3px 5px;
             /* transition: 0.5s; */
         }
-        .table input:focus{
-                border-radius: 0;
+
+        .table input:focus {
+            border-radius: 0;
         }
 
         .feedback {
+            /* color: #f8f8f8;
+            font-weight: 700; */
             /* margin-top: 30px; */
 
             flex-grow: 1;
             /* background-color: #FFAEBE */
-            background-color: rgba(255, 174, 190, 0.7);
+            background-color: rgba(255, 174, 190);
         }
 
 
@@ -109,8 +113,55 @@
             border-radius: 5px;
             transition: 0.5s;
         }
-        #send-it:hover, #send-it:focus{
+
+        #send-it:hover,
+        #send-it:focus {
             background-color: #b2d134;
+        }
+
+        @media(max-width:660px) {
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+
+            body>* {
+                flex-grow: 0;
+                width: 100%;
+            }
+
+            .feedback {
+                font-size: 16px;
+
+            }
+
+            .content-left {
+                font-size: 16px;
+            }
+
+            .content-left ul {
+                margin-left: 90px;
+            }
+
+            #icon {
+                margin-left: 120px;
+            }
+
+            .table input,
+            textarea {
+                margin-left: 100px;
+                border: none;
+                border-radius: 3px;
+                margin: 1px;
+                padding: 3px 5px;
+                /* transition: 0.5s; */
+            }
+        }
+        @media(max-width:320px){
+            .table input{
+                size: 15px;
+            }
+
         }
     </style>
 </head>
@@ -174,14 +225,15 @@
             <tr>
                 <td style="margin-left: 5px;">Message:</td>
                 <td>
-                    <textarea type="text" value="feedback" maxlength="50" size="20"
+                    <textarea type="text" value="feedback"  maxlength="50" size="25"
                         style=" word-break: break-all; background-color:#FFE0E6; resize: none;"></textarea>
                 </td>
             </tr>
 
 
         </table>
-        <input id="send-it" type="submit" onclick="SubmitEvent" value="SEND IT" style="text-align: center; color: white; font-weight: 500;">
+        <input id="send-it" type="submit" onclick="SubmitEvent" value="SEND IT"
+            style="text-align: center; color: white; font-weight: 500;">
     </div>
 
 </body>

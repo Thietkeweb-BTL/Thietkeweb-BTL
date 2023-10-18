@@ -6,7 +6,9 @@ body {
 
 a {
     text-decoration: none;
+    min-width: 400px;
 }
+
 
 /* header {
     text-align: right;
